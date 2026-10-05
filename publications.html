@@ -33,11 +33,16 @@
     <h1 class="page-title">Publications</h1>
     <p class="page-subtitle">Peer-Reviewed Journal Articles & Preprints</p>
 
-    <!-- Direct HTML Publications List -->
-    <div class="card" style="padding: 20px;">
+    <!-- Search and Filter Controls -->
+    <div class="filter-container" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+      <input type="text" id="pub-search" class="search-input" placeholder="Search by title, author, keyword..." onkeyup="filterPublicationsHTML()" style="padding: 8px; flex: 1; min-width: 250px;">
+    </div>
+
+    <!-- Direct HTML Publications List Container -->
+    <div id="publications-container" class="card" style="padding: 20px;">
       
       <!-- Paper 1 -->
-      <div class="publication-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-text="tracing the journey of microplastics northern bay of bengal marine ecosystems bangladesh islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
           <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
             Tracing the Journey of Microplastics in the Northern Bay of Bengal Marine Ecosystems, Bangladesh: A Comprehensive Study on Source Appointments, Distribution, and Potential Risks
@@ -48,7 +53,7 @@
       </div>
 
       <!-- Paper 2 -->
-      <div class="publication-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-text="tracing microplastic footprints bangladesh largest baors oxbow lake chowdhury p islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
           <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
             Tracing Microplastic Footprints in Bangladesh’s Largest Baors (Oxbow Lake): First Insights into Characterization, Ecological Risks, and Implications for Aquatic Health
@@ -59,7 +64,7 @@
       </div>
 
       <!-- Paper 3 -->
-      <div class="publication-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-text="source tracking pollution load potential risks assessment microplastic pollution agricultural soils bangladesh biswas a debnath pc islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
           <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
             Source Tracking, Pollution Load, and Potential Risks Assessment for Microplastic Pollution in Agricultural Soils, Bangladesh using Machine Learning and Multi-Matrix approaches
@@ -70,7 +75,7 @@
       </div>
 
       <!-- Paper 4 -->
-      <div class="publication-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-text="microplastic contaminants eggs identification characterization potential risks rayhan ma debnath pc kharel g islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
           <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
             Microplastic contaminants in eggs: Identification, characterization, and potential risks
@@ -81,7 +86,7 @@
       </div>
 
       <!-- Paper 5 -->
-      <div class="publication-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-text="unveiling hidden pollutants indoor environment microplastic pollution risks educational institutions megacity bangladesh chakraborty tk islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
           <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
             Unveiling the hidden pollutants in the indoor environment: Focus on microplastic pollution and its related risks in the educational institutions of megacity, Bangladesh
@@ -92,7 +97,7 @@
       </div>
 
       <!-- Paper 6 -->
-      <div class="publication-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-text="microplastics commercially available branded milk bangladesh emerging threat human health chakraborty tk islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
           <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
             Microplastics in the commercially available branded milk in Bangladesh: An emerging threat for human health
@@ -103,7 +108,7 @@
       </div>
 
       <!-- Paper 7 -->
-      <div class="publication-item">
+      <div class="publication-item" data-text="predictive analysis optimization acid red 27 dye adsorption rice husk charcoal box behnken design artificial neural networks asif smh islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
           <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
             Predictive Analysis and Optimization of Acid Red 27 Dye Adsorption on Rice Husk Charcoal Using Box-Behnken Design and Artificial Neural Networks approaches
@@ -114,6 +119,24 @@
       </div>
 
     </div>
+  </main>
+
+  <!-- Simple Search Script -->
+  <script>
+    function filterPublicationsHTML() {
+      let input = document.getElementById('pub-search').value.toLowerCase();
+      let items = document.getElementsByClassName('publication-item');
+      
+      for (let i = 0; i < items.length; i++) {
+        let text = items[i].getAttribute('data-text');
+        if (text.includes(input)) {
+          items[i].style.display = "";
+        } else {
+          items[i].style.display = "none";
+        }
+      }
+    }
+  </script>
   </main>
 
   <footer>
