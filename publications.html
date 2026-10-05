@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications | Khandakar Rashedul Islam</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header>
@@ -18,7 +17,7 @@
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="research.html" class="nav-link">Research</a></li>
-        <li><a href="publications.html" class="nav-link">Publications</a></li>
+        <li><a href="publications.html" class="nav-link active">Publications</a></li>
         <li><a href="projects.html" class="nav-link">Projects</a></li>
         <li><a href="experience.html" class="nav-link">Experience</a></li>
         <li><a href="skills.html" class="nav-link">Skills</a></li>
@@ -29,114 +28,276 @@
     </div>
   </header>
 
-<main class="container">
+  <main class="container">
     <h1 class="page-title">Publications</h1>
     <p class="page-subtitle">Peer-Reviewed Journal Articles & Preprints</p>
 
     <!-- Search and Filter Controls -->
     <div class="filter-container" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-      <input type="text" id="pub-search" class="search-input" placeholder="Search by title, author, keyword..." onkeyup="filterPublicationsHTML()" style="padding: 8px; flex: 1; min-width: 250px;">
+      <input type="text" id="pub-search" class="search-input" placeholder="Search by title, author, keyword..." onkeyup="filterPublications()" style="padding: 10px; flex: 1; min-width: 250px; border: 1px solid #ccc; border-radius: 4px;">
+      
+      <select id="pub-filter-category" class="select-input" onchange="filterPublications()" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        <option value="all">All Categories</option>
+        <option value="journal">Peer-Reviewed Journal</option>
+        <option value="review">Under Review / Submitted</option>
+      </select>
+
+      <select id="pub-filter-year" class="select-input" onchange="filterPublications()" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        <option value="all">All Years</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+      </select>
     </div>
 
-    <!-- Direct HTML Publications List Container -->
+    <!-- Publications List Container -->
     <div id="publications-container" class="card" style="padding: 20px;">
       
       <!-- Paper 1 -->
-      <div class="publication-item" data-text="tracing the journey of microplastics northern bay of bengal marine ecosystems bangladesh islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-category="journal" data-year="2025" data-text="tracing the journey of microplastics in the northern bay of bengal marine ecosystems bangladesh islam kr debnath pc">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
-          <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
+          <a href="https://doi.org/10.1016/j.hazadv.2025.100829" target="_blank" style="color: #0056b3; text-decoration: none;">
             Tracing the Journey of Microplastics in the Northern Bay of Bengal Marine Ecosystems, Bangladesh: A Comprehensive Study on Source Appointments, Distribution, and Potential Risks
           </a>
         </h3>
-        <p style="margin: 0 0 5px 0;"><strong><u>Islam, K. R.</u></strong>, Debnath, P. C., et al.</p>
-        <p style="margin: 0; font-style: italic; color: #555;">Journal of Hazardous Materials Advances (Elsevier) (2025) - <strong>Q1, IF=7.7</strong></p>
+        <p style="margin: 0 0 5px 0;">Islam, K. R., Debnath, P. C., et al. (2025)[cite: 1].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Journal of Hazardous Materials Advances (Elsevier, Q1, IF=7.7)[cite: 1]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.hazadv.2025.100829" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.hazadv.2025.100829</a>[cite: 1]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
       </div>
 
       <!-- Paper 2 -->
-      <div class="publication-item" data-text="tracing microplastic footprints bangladesh largest baors oxbow lake chowdhury p islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-category="journal" data-year="2026" data-text="tracing microplastic footprints in bangladesh's largest baors oxbow lake chowdhury p islam kr">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
-          <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
-            Tracing Microplastic Footprints in Bangladesh’s Largest Baors (Oxbow Lake): First Insights into Characterization, Ecological Risks, and Implications for Aquatic Health
+          <a href="https://doi.org/10.1016/j.ecoenv.2026.119820" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Tracing Microplastic Footprints in Bangladesh's Largest Baors (Oxbow Lake): First Insights into Characterization, Ecological Risks, and Implications for Aquatic Health
           </a>
         </h3>
-        <p style="margin: 0 0 5px 0;">Chowdhury, P., <strong><u>Islam, K. R.</u></strong>, et al.</p>
-        <p style="margin: 0; font-style: italic; color: #555;">Ecotoxicology and Environmental Safety (Elsevier) (2026) - <strong>Q1, IF=6.1</strong></p>
+        <p style="margin: 0 0 5px 0;">Chowdhury, P., Islam, K. R., et al. (2026)[cite: 1].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Ecotoxicology and Environmental Safety (Elsevier, Q1, IF=6.1)[cite: 1]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.ecoenv.2026.119820" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.ecoenv.2026.119820</a>[cite: 1]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
       </div>
 
       <!-- Paper 3 -->
-      <div class="publication-item" data-text="source tracking pollution load potential risks assessment microplastic pollution agricultural soils bangladesh biswas a debnath pc islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-category="journal" data-year="2026" data-text="source tracking pollution load and potential risks assessment for microplastic pollution in agricultural soils bangladesh biswas a debnath pc islam kr">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
-          <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
+          <a href="https://doi.org/10.1016/j.envpol.2026.127669" target="_blank" style="color: #0056b3; text-decoration: none;">
             Source Tracking, Pollution Load, and Potential Risks Assessment for Microplastic Pollution in Agricultural Soils, Bangladesh using Machine Learning and Multi-Matrix approaches
           </a>
         </h3>
-        <p style="margin: 0 0 5px 0;">Biswas, A., Debnath, P. C., <strong><u>Islam, K. R.</u></strong>, et al.</p>
-        <p style="margin: 0; font-style: italic; color: #555;">Environmental Pollution (Elsevier) (2026) - <strong>Q1, IF=7.3</strong></p>
+        <p style="margin: 0 0 5px 0;">Biswas, A., Debnath, P. C., Islam, K. R., et al. (2026)[cite: 1].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Environmental Pollution (Elsevier, Q1, IF=7.3)[cite: 1]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.envpol.2026.127669" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.envpol.2026.127669</a>[cite: 1]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
       </div>
 
       <!-- Paper 4 -->
-      <div class="publication-item" data-text="microplastic contaminants eggs identification characterization potential risks rayhan ma debnath pc kharel g islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-category="journal" data-year="2025" data-text="microplastic contaminants in eggs identification characterization and potential risks rayhan ma debnath pc kharel g islam kr">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
-          <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
+          <a href="https://doi.org/10.1016/j.fbio.2025.108163" target="_blank" style="color: #0056b3; text-decoration: none;">
             Microplastic contaminants in eggs: Identification, characterization, and potential risks
           </a>
         </h3>
-        <p style="margin: 0 0 5px 0;">Rayhan, M. A., Debnath, P. C., Kharel, G., <strong><u>Islam, K. R.</u></strong>, et al.</p>
-        <p style="margin: 0; font-style: italic; color: #555;">Food Bioscience (Elsevier) (2025) - <strong>Q1, IF=5.9</strong></p>
+        <p style="margin: 0 0 5px 0;">Rayhan, M. A., Debnath, P. C., Kharel, G., Islam, K. R., et al. (2025)[cite: 1].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Food Bioscience (Elsevier, Q1, IF=5.9)[cite: 1]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.fbio.2025.108163" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.fbio.2025.108163</a>[cite: 1]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
       </div>
 
       <!-- Paper 5 -->
-      <div class="publication-item" data-text="unveiling hidden pollutants indoor environment microplastic pollution risks educational institutions megacity bangladesh chakraborty tk islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-category="journal" data-year="2025" data-text="unveiling the hidden pollutants in the indoor environment focus on microplastic pollution and its related risks in the educational institutions of megacity bangladesh chakraborty tk islam kr">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
-          <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
+          <a href="https://doi.org/10.1016/j.envpol.2025.126831" target="_blank" style="color: #0056b3; text-decoration: none;">
             Unveiling the hidden pollutants in the indoor environment: Focus on microplastic pollution and its related risks in the educational institutions of megacity, Bangladesh
           </a>
         </h3>
-        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., <strong><u>Islam, K. R.</u></strong>, et al.</p>
-        <p style="margin: 0; font-style: italic; color: #555;">Environmental Pollution (Elsevier) (2025) - <strong>Q1, IF=7.3</strong></p>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., ..., Islam, K. R., et al. (2025)[cite: 1].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Environmental Pollution (Elsevier, Q1, IF=7.3)[cite: 1]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.envpol.2025.126831" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.envpol.2025.126831</a>[cite: 1]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
       </div>
 
       <!-- Paper 6 -->
-      <div class="publication-item" data-text="microplastics commercially available branded milk bangladesh emerging threat human health chakraborty tk islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-category="journal" data-year="2025" data-text="physicochemical characterization ecological risk assessment and spatial distribution of microplastics in bangladesh's largest coral reef systems nice ms islam kr">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
-          <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
-            Microplastics in the commercially available branded milk in Bangladesh: An emerging threat for human health
+          <a href="https://doi.org/10.1016/j.pce.2025.104164" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Physicochemical characterization, ecological risk assessment and spatial distribution of microplastics in Bangladesh's largest coral reef systems
           </a>
         </h3>
-        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., <strong><u>Islam, K. R.</u></strong>, et al.</p>
-        <p style="margin: 0; font-style: italic; color: #555;">Journal of Hazardous Materials (Elsevier) (2024) - <strong>Q1, IF=12.2</strong></p>
+        <p style="margin: 0 0 5px 0;">Nice, M. S., ..., Islam, K. R., et al. (2025)[cite: 1].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Physics and Chemistry of the Earth (Elsevier, Q1, IF=4.1)[cite: 1]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.pce.2025.104164" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.pce.2025.104164</a>[cite: 1]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
       </div>
 
       <!-- Paper 7 -->
-      <div class="publication-item" data-text="predictive analysis optimization acid red 27 dye adsorption rice husk charcoal box behnken design artificial neural networks asif smh islam kr" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+      <div class="publication-item" data-category="journal" data-year="2025" data-text="evaluating the impacts of microplastics on agricultural soil physical chemical properties and toxic metal availability an emerging concern for sustainable agriculture chakraborty tk islam kr">
         <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
-          <a href="https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en" target="_blank" style="color: #0056b3; text-decoration: none;">
-            Predictive Analysis and Optimization of Acid Red 27 Dye Adsorption on Rice Husk Charcoal Using Box-Behnken Design and Artificial Neural Networks approaches
+          <a href="https://doi.org/10.1371/journal.pone.0304811" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Evaluating the impacts of microplastics on agricultural soil physical, chemical properties, and toxic metal availability: An emerging concern for sustainable agriculture
           </a>
         </h3>
-        <p style="margin: 0 0 5px 0;">Asif, S. M. H., <strong><u>Islam, K. R.</u></strong>, et al.</p>
-        <p style="margin: 0; font-style: italic; color: #555;">Heliyon (Elsevier) (2025) - <strong>Under Review</strong></p>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., ..., Islam, K. R., et al. (2025)[cite: 1].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Plos One (PLOS, Q1, IF=2.9)[cite: 1]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1371/journal.pone.0304811" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1371/journal.pone.0304811</a>[cite: 1]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 8 -->
+      <div class="publication-item" data-category="journal" data-year="2024" data-text="microplastics in the commercially available branded milk in bangladesh an emerging threat for human health chakraborty tk islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.1016/j.jhazmat.2024.135374" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Microplastics in the commercially available branded milk in Bangladesh: An emerging threat for human health
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., Islam, K. R., et al. (2024)[cite: 1, 2].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Journal of Hazardous Materials (Elsevier, Q1, IF=12.2)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.jhazmat.2024.135374" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.jhazmat.2024.135374</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 9 -->
+      <div class="publication-item" data-category="journal" data-year="2024" data-text="application of machine learning and multivariate approaches for assessing microplastic pollution and its associated risks in the urban outdoor environment of bangladesh chakraborty tk islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.1016/j.jhazmat.2024.134359" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Application of machine learning and multivariate approaches for assessing microplastic pollution and its associated risks in the urban outdoor environment of Bangladesh
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., Islam, K. R., et al. (2024)[cite: 2].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Journal of Hazardous Materials (Elsevier, Q1, IF=13.6)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.jhazmat.2024.134359" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.jhazmat.2024.134359</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 10 -->
+      <div class="publication-item" data-category="journal" data-year="2024" data-text="appraisal of microplastic pollution and its related risks for urban indoor environment in bangladesh using machine learning and diverse risk evolution indices netema bn islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.1016/j.envpol.2024.124631" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Appraisal of microplastic pollution and its related risks for urban indoor environment in Bangladesh using machine learning and diverse risk evolution indices
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Netema, B. N., ..., Islam, K. R., et al. (2024)[cite: 2].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Environmental Pollution (Elsevier, Q1, IF=7.6)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.envpol.2024.124631" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.envpol.2024.124631</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 11 -->
+      <div class="publication-item" data-category="journal" data-year="2024" data-text="application of machine learning and statistical approaches for optimization of heavy metals adsorption onto carbonized char prepared from pet plastic bottle waste chakraborty tk rahman s islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.2166/aqua.2024.222" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Application of machine learning and statistical approaches for optimization of heavy metals (Cd2+, Pb2+, Cu2+, and Zn2+) adsorption onto carbonized char prepared from PET plastic bottle waste
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., Rahman, S., Islam, K. R., et al. (2024)[cite: 2].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">AQUA-Water Infrastructure, Ecosystems and Society (IWA, Q1, IF=3.01)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.2166/aqua.2024.222" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.2166/aqua.2024.222</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 12 -->
+      <div class="publication-item" data-category="journal" data-year="2023" data-text="adsorption of acid and basic dye from the simulated wastewater using carbonized microplastic particles synthesized from recycled polyethylene terephthalate plastic waste bottles chakraborty tk islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.2166/aqua.2023.211" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Adsorption of acid and basic dye from the simulated wastewater using carbonized microplastic particles synthesized from recycled polyethylene terephthalate plastic waste bottles: an integrated approach for experimental and practical applications
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., ..., Islam, K. R., et al. (2023)[cite: 2].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">AQUA-Water Infrastructure, Ecosystems and Society (IWA, Q1, IF=3.01)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.2166/aqua.2023.211" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.2166/aqua.2023.211</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 13 -->
+      <div class="publication-item" data-category="journal" data-year="2023" data-text="receptor model-based sources and risks appraisal of potentially toxic elements in the urban soils of bangladesh chakraborty tk islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.1016/j.toxrep.2023.02.011" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Receptor model-based sources and risks appraisal of potentially toxic elements in the urban soils of Bangladesh
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., ..., Islam, K. R., et al. (2023)[cite: 2].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Toxicology Reports (Elsevier, Q1, IF=4.82)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.toxrep.2023.02.011" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.toxrep.2023.02.011</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 14 -->
+      <div class="publication-item" data-category="journal" data-year="2023" data-text="application of machine learning and multivariate approaches for source apportionment and risks of hazardous elements in the cropland soils near industrial areas in bangladesh chakraborty tk islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.1016/j.ecolind.2023.110856" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Application of machine learning and multivariate approaches for source apportionment and risks of hazardous elements in the cropland soils near industrial areas in Bangladesh
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., ..., Islam, K. R., et al. (2023)[cite: 2].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Ecological Indicators (Elsevier, Q1, IF=6.9)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.ecolind.2023.110856" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.ecolind.2023.110856</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 15 -->
+      <div class="publication-item" data-category="journal" data-year="2023" data-text="removal of hazardous textile dye from simulated wastewater by municipal organic solid waste charcoal using machine learning approaches kinetics isotherm and thermodynamics chakraborty tk ghosh s nice ms islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.1016/j.heliyon.2023.e18856" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Removal of hazardous textile dye from simulated wastewater by municipal organic solid waste charcoal using machine learning approaches: Kinetics, isotherm, and thermodynamics
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., Ghosh, S., Nice, M. S., Islam, K. R., et al. (2023)[cite: 2, 3].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Heliyon (Elsevier, Q1, IF=3.77)[cite: 2]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1016/j.heliyon.2023.e18856" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1016/j.heliyon.2023.e18856</a>[cite: 2]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 16 -->
+      <div class="publication-item" data-category="journal" data-year="2023" data-text="black carbon derived pet plastic bottle waste and rice straw for sorption of acid red 27 dye machine learning approaches kinetics isotherm and thermodynamic studies chakraborty tk tammim l islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <a href="https://doi.org/10.1371/journal.pone.0290471" target="_blank" style="color: #0056b3; text-decoration: none;">
+            Black carbon derived PET plastic bottle waste and rice straw for sorption of Acid Red 27 dye: Machine learning approaches, kinetics, isotherm and thermodynamic studies
+          </a>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Chakraborty, T. K., Tammim, L., Islam, K. R., et al. (2023)[cite: 3].</p>
+        <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">Plos One (PLOS, Q1, IF=3.7)[cite: 3]</p>
+        <p style="margin: 0 0 15px 0; font-size: 0.9rem;"><a href="https://doi.org/10.1371/journal.pone.0290471" target="_blank" style="color: #28a745; text-decoration: none;">DOI: 10.1371/journal.pone.0290471</a>[cite: 3]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 17 -->
+      <div class="publication-item" data-category="review" data-year="2025" data-text="predictive analysis and optimization of acid red 27 dye adsorption on rice husk charcoal using box-behnken design and artificial neural networks approaches asif smh islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <span style="color: #0056b3;">
+            Predictive Analysis and Optimization of Acid Red 27 Dye Adsorption on Rice Husk Charcoal Using Box-Behnken Design and Artificial Neural Networks approaches
+          </span>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Asif, S., M., H., ..., Islam, K. R., et al. (2025)[cite: 3].</p>
+        <p style="margin: 0 0 15px 0; font-style: italic; color: #555;">Status: Submitted - Heliyon[cite: 3]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 18 -->
+      <div class="publication-item" data-category="review" data-year="2026" data-text="assessment of heavy metal pollution and associated risks in indoor dust from educational institutions of a megacity in bangladesh insights from machine learning and multivariate analyses debnath pc islam ms islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <span style="color: #0056b3;">
+            Assessment of Heavy Metal Pollution and Associated Risks in Indoor Dust from Educational Institutions of a Megacity in Bangladesh: Insights from Machine Learning and Multivariate Analyses
+          </span>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Debnath, P. C., Islam, M. S., Islam, K. R., et al. (2026)[cite: 3].</p>
+        <p style="margin: 0 0 15px 0; font-style: italic; color: #555;">Status: Submitted - Indoor Air[cite: 3]</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 15px;">
+      </div>
+
+      <!-- Paper 19 -->
+      <div class="publication-item" data-category="review" data-year="2026" data-text="source tracking distribution and potential risks assessment of heavy metals in the urban road dust of bangladesh using machine learning gis and multi-matrix assessment rahman ms islam ms debnath pc islam kr">
+        <h3 style="font-size: 1.1rem; margin-bottom: 5px;">
+          <span style="color: #0056b3;">
+            Source tracking, distribution and potential risks assessment of heavy metals in the urban road dust of Bangladesh using machine learning, GIS and multi-matrix assessment
+          </span>
+        </h3>
+        <p style="margin: 0 0 5px 0;">Rahman, M. S., Islam, M. S., Debnath, P. C., Islam, K. R., et al. (2026)[cite: 3].</p>
+        <p style="margin: 0 0 15px 0; font-style: italic; color: #555;">Status: Under review - Plos One[cite: 3]</p>
       </div>
 
     </div>
-  </main>
-
-  <!-- Simple Search Script -->
-  <script>
-    function filterPublicationsHTML() {
-      let input = document.getElementById('pub-search').value.toLowerCase();
-      let items = document.getElementsByClassName('publication-item');
-      
-      for (let i = 0; i < items.length; i++) {
-        let text = items[i].getAttribute('data-text');
-        if (text.includes(input)) {
-          items[i].style.display = "";
-        } else {
-          items[i].style.display = "none";
-        }
-      }
-    }
-  </script>
   </main>
 
   <footer>
@@ -144,5 +305,32 @@
       <p>&copy; 2026 Khandakar Rashedul Islam.</p>
     </div>
   </footer>
+
+  <!-- Filter & Search Script -->
+  <script>
+    function filterPublications() {
+      let searchInput = document.getElementById('pub-search').value.toLowerCase();
+      let categoryFilter = document.getElementById('pub-filter-category').value;
+      let yearFilter = document.getElementById('pub-filter-year').value;
+      
+      let items = document.getElementsByClassName('publication-item');
+      
+      for (let i = 0; i < items.length; i++) {
+        let text = items[i].getAttribute('data-text');
+        let category = items[i].getAttribute('data-category');
+        let year = items[i].getAttribute('data-year');
+        
+        let matchesSearch = text.includes(searchInput);
+        let matchesCategory = (categoryFilter === 'all' || category === categoryFilter);
+        let matchesYear = (yearFilter === 'all' || year === yearFilter);
+        
+        if (matchesSearch && matchesCategory && matchesYear) {
+          items[i].style.display = "";
+        } else {
+          items[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 </html>
