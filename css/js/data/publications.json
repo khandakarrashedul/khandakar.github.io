@@ -1,0 +1,96 @@
+{
+  "publications": [
+    {
+      "id": "islam2025tracing",
+      "title": "Tracing the Journey of Microplastics in the Northern Bay of Bengal Marine Ecosystems, Bangladesh: A Comprehensive Study on Source Appointments, Distribution, and Potential Risks",
+      "authors": ["Islam, K. R.", "Debnath, P. C.", "et al."],
+      "journal": "Journal of Hazardous Materials Advances (Elsevier)",
+      "year": 2025,
+      "type": "journal",
+      "metrics": "Q1, IF=7.7",
+      "doi": "",
+      "url": "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      "keywords": ["Microplastics", "Bay of Bengal", "Marine Ecosystem", "Source Apportionment"],
+      "bibtex": "@article{islam2025tracing,\n  title={Tracing the Journey of Microplastics in the Northern Bay of Bengal Marine Ecosystems, Bangladesh},\n  author={Islam, K. R. and Debnath, P. C. and others},\n  journal={Journal of Hazardous Materials Advances},\n  year={2025}\n}"
+    },
+    {
+      "id": "chowdhury2026tracing",
+      "title": "Tracing Microplastic Footprints in Bangladesh’s Largest Baors (Oxbow Lake): First Insights into Characterization, Ecological Risks, and Implications for Aquatic Health",
+      "authors": ["Chowdhury, P.", "Islam, K. R.", "et al."],
+      "journal": "Ecotoxicology and Environmental Safety (Elsevier)",
+      "year": 2026,
+      "type": "journal",
+      "metrics": "Q1, IF=6.1",
+      "doi": "",
+      "url": "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      "keywords": ["Microplastics", "Oxbow Lake", "Ecological Risk"],
+      "bibtex": "@article{chowdhury2026tracing,\n  title={Tracing Microplastic Footprints in Bangladesh’s Largest Baors (Oxbow Lake)},\n  author={Chowdhury, P. and Islam, K. R. and others},\n  journal={Ecotoxicology and Environmental Safety},\n  year={2026}\n}"
+    },
+    {
+      "id": "biswas2026source",
+      "title": "Source Tracking, Pollution Load, and Potential Risks Assessment for Microplastic Pollution in Agricultural Soils, Bangladesh using Machine Learning and Multi-Matrix approaches",
+      "authors": ["Biswas A.", "Debnath, P. C.", "Islam, K. R.", "et al."],
+      "journal": "Environmental Pollution (Elsevier)",
+      "year": 2026,
+      "type": "journal",
+      "metrics": "Q1, IF=7.3",
+      "doi": "",
+      "url": "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      "keywords": ["Agricultural Soil", "Machine Learning", "Microplastics"],
+      "bibtex": "@article{biswas2026source,\n  title={Source Tracking, Pollution Load, and Potential Risks Assessment for Microplastic Pollution in Agricultural Soils},\n  author={Biswas, A. and Debnath, P. C. and Islam, K. R. and others},\n  journal={Environmental Pollution},\n  year={2026}\n}"
+    },
+    {
+      "id": "rayhan2025microplastic",
+      "title": "Microplastic contaminants in eggs: Identification, characterization, and potential risks",
+      "authors": ["Rayhan, M. A.", "Debnath, P. C.", "Kharel, G.", "Islam, K. R.", "et al."],
+      "journal": "Food Bioscience (Elsevier)",
+      "year": 2025,
+      "type": "journal",
+      "metrics": "Q1, IF=5.9",
+      "doi": "",
+      "url": "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      "keywords": ["Food Safety", "Microplastics", "Eggs"],
+      "bibtex": "@article{rayhan2025microplastic,\n  title={Microplastic contaminants in eggs: Identification, characterization, and potential risks},\n  author={Rayhan, M. A. and Debnath, P. C. and Kharel, G. and Islam, K. R. and others},\n  journal={Food Bioscience},\n  year={2025}\n}"
+    },
+    {
+      "id": "chakraborty2025unveiling",
+      "title": "Unveiling the hidden pollutants in the indoor environment: Focus on microplastic pollution and its related risks in the educational institutions of megacity, Bangladesh",
+      "authors": ["Chakraborty, T. K.", "Islam, K. R.", "et al."],
+      "journal": "Environmental Pollution (Elsevier)",
+      "year": 2025,
+      "type": "journal",
+      "metrics": "Q1, IF=7.3",
+      "doi": "",
+      "url": "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      "keywords": ["Indoor Environment", "Educational Institutions", "Microplastics"],
+      "bibtex": "@article{chakraborty2025unveiling,\n  title={Unveiling the hidden pollutants in the indoor environment},\n  author={Chakraborty, T. K. and Islam, K. R. and others},\n  journal={Environmental Pollution},\n  year={2025}\n}"
+    },
+    {
+      "id": "chakraborty2024milk",
+      "title": "Microplastics in the commercially available branded milk in Bangladesh: An emerging threat for human health",
+      "authors": ["Chakraborty, T. K.", "Islam, K. R.", "et al."],
+      "journal": "Journal of Hazardous Materials (Elsevier)",
+      "year": 2024,
+      "type": "journal",
+      "metrics": "Q1, IF=12.2",
+      "doi": "",
+      "url": "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      "keywords": ["Milk", "Food Safety", "Human Health"],
+      "bibtex": "@article{chakraborty2024milk,\n  title={Microplastics in the commercially available branded milk in Bangladesh},\n  author={Chakraborty, T. K. and Islam, K. R. and others},\n  journal={Journal of Hazardous Materials},\n  year={2024}\n}"
+    },
+    {
+      "id": "asif2025predictive",
+      "title": "Predictive Analysis and Optimization of Acid Red 27 Dye Adsorption on Rice Husk Charcoal Using Box-Behnken Design and Artificial Neural Networks approaches",
+      "authors": ["Asif, S. M. H.", "Islam, K. R.", "et al."],
+      "journal": "Heliyon (Elsevier)",
+      "year": 2025,
+      "type": "review",
+      "status": "Under Review",
+      "metrics": "Under Review",
+      "doi": "",
+      "url": "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      "keywords": ["Adsorption", "Artificial Neural Networks", "Biochar"],
+      "bibtex": ""
+    }
+  ]
+}
