@@ -4,32 +4,101 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryFilter = document.getElementById("pub-filter-category");
   const yearFilter = document.getElementById("pub-filter-year");
 
-  // Only run this script if we are on the publications page
   if (!pubContainer) return; 
 
-  let publicationsData = [];
+  // Direct publication data (No external file loading required, prevents 404 errors)
+  const publicationsData = [
+    {
+      id: "islam2025tracing",
+      title: "Tracing the Journey of Microplastics in the Northern Bay of Bengal Marine Ecosystems, Bangladesh: A Comprehensive Study on Source Appointments, Distribution, and Potential Risks",
+      authors: ["Islam, K. R.", "Debnath, P. C.", "et al."],
+      journal: "Journal of Hazardous Materials Advances (Elsevier)",
+      year: 2025,
+      type: "journal",
+      metrics: "Q1, IF=7.7",
+      url: "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      keywords: ["Microplastics", "Bay of Bengal", "Marine Ecosystem", "Source Apportionment"],
+      bibtex: "@article{islam2025tracing,\n  title={Tracing the Journey of Microplastics in the Northern Bay of Bengal Marine Ecosystems, Bangladesh},\n  author={Islam, K. R. and Debnath, P. C. and others},\n  journal={Journal of Hazardous Materials Advances},\n  year={2025}\n}"
+    },
+    {
+      id: "chowdhury2026tracing",
+      title: "Tracing Microplastic Footprints in Bangladesh’s Largest Baors (Oxbow Lake): First Insights into Characterization, Ecological Risks, and Implications for Aquatic Health",
+      authors: ["Chowdhury, P.", "Islam, K. R.", "et al."],
+      journal: "Ecotoxicology and Environmental Safety (Elsevier)",
+      year: 2026,
+      type: "journal",
+      metrics: "Q1, IF=6.1",
+      url: "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      keywords: ["Microplastics", "Oxbow Lake", "Ecological Risk"],
+      bibtex: "@article{chowdhury2026tracing,\n  title={Tracing Microplastic Footprints in Bangladesh’s Largest Baors (Oxbow Lake)},\n  author={Chowdhury, P. and Islam, K. R. and others},\n  journal={Ecotoxicology and Environmental Safety},\n  year={2026}\n}"
+    },
+    {
+      id: "biswas2026source",
+      title: "Source Tracking, Pollution Load, and Potential Risks Assessment for Microplastic Pollution in Agricultural Soils, Bangladesh using Machine Learning and Multi-Matrix approaches",
+      authors: ["Biswas A.", "Debnath, P. C.", "Islam, K. R.", "et al."],
+      journal: "Environmental Pollution (Elsevier)",
+      year: 2026,
+      type: "journal",
+      metrics: "Q1, IF=7.3",
+      url: "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      keywords: ["Agricultural Soil", "Machine Learning", "Microplastics"],
+      bibtex: "@article{biswas2026source,\n  title={Source Tracking, Pollution Load, and Potential Risks Assessment for Microplastic Pollution in Agricultural Soils},\n  author={Biswas, A. and Debnath, P. C. and Islam, K. R. and others},\n  journal={Environmental Pollution},\n  year={2026}\n}"
+    },
+    {
+      id: "rayhan2025microplastic",
+      title: "Microplastic contaminants in eggs: Identification, characterization, and potential risks",
+      authors: ["Rayhan, M. A.", "Debnath, P. C.", "Kharel, G.", "Islam, K. R.", "et al."],
+      journal: "Food Bioscience (Elsevier)",
+      year: 2025,
+      type: "journal",
+      metrics: "Q1, IF=5.9",
+      url: "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      keywords: ["Food Safety", "Microplastics", "Eggs"],
+      bibtex: "@article{rayhan2025microplastic,\n  title={Microplastic contaminants in eggs: Identification, characterization, and potential risks},\n  author={Rayhan, M. A. and Debnath, P. C. and Kharel, G. and Islam, K. R. and others},\n  journal={Food Bioscience},\n  year={2025}\n}"
+    },
+    {
+      id: "chakraborty2025unveiling",
+      title: "Unveiling the hidden pollutants in the indoor environment: Focus on microplastic pollution and its related risks in the educational institutions of megacity, Bangladesh",
+      authors: ["Chakraborty, T. K.", "Islam, K. R.", "et al."],
+      journal: "Environmental Pollution (Elsevier)",
+      year: 2025,
+      type: "journal",
+      metrics: "Q1, IF=7.3",
+      url: "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      keywords: ["Indoor Environment", "Educational Institutions", "Microplastics"],
+      bibtex: "@article{chakraborty2025unveiling,\n  title={Unveiling the hidden pollutants in the indoor environment},\n  author={Chakraborty, T. K. and Islam, K. R. and others},\n  journal={Environmental Pollution},\n  year={2025}\n}"
+    },
+    {
+      id: "chakraborty2024milk",
+      title: "Microplastics in the commercially available branded milk in Bangladesh: An emerging threat for human health",
+      authors: ["Chakraborty, T. K.", "Islam, K. R.", "et al."],
+      journal: "Journal of Hazardous Materials (Elsevier)",
+      year: 2024,
+      type: "journal",
+      metrics: "Q1, IF=12.2",
+      url: "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      keywords: ["Milk", "Food Safety", "Human Health"],
+      bibtex: "@article{chakraborty2024milk,\n  title={Microplastics in the commercially available branded milk in Bangladesh},\n  author={Chakraborty, T. K. and Islam, K. R. and others},\n  journal={Journal of Hazardous Materials},\n  year={2024}\n}"
+    },
+    {
+      id: "asif2025predictive",
+      title: "Predictive Analysis and Optimization of Acid Red 27 Dye Adsorption on Rice Husk Charcoal Using Box-Behnken Design and Artificial Neural Networks approaches",
+      authors: ["Asif, S. M. H.", "Islam, K. R.", "et al."],
+      journal: "Heliyon (Elsevier)",
+      year: 2025,
+      type: "review",
+      metrics: "Under Review",
+      url: "https://scholar.google.com/citations?user=u9Iv7xsAAAAJ&hl=en",
+      keywords: ["Adsorption", "Artificial Neural Networks", "Biochar"],
+      bibtex: ""
+    }
+  ];
 
-  // Fetch the publication data from the JSON file
-  fetch("data/publications.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Could not load JSON file.");
-      }
-      return response.json();
-    })
-    .then(data => {
-      publicationsData = data.publications;
-      populateYearFilter(publicationsData);
-      displayPublications(publicationsData);
-    })
-    .catch(error => {
-      console.error("Error loading publications:", error);
-      pubContainer.innerHTML = "<p style='padding: 20px; color: red;'>Error loading publications. Please check your JSON formatting.</p>";
-    });
+  populateYearFilter(publicationsData);
+  displayPublications(publicationsData);
 
-  // Function to build and display the HTML for each publication
   function displayPublications(pubs) {
-    pubContainer.innerHTML = ""; // Clear current list
+    pubContainer.innerHTML = ""; 
 
     if (pubs.length === 0) {
       pubContainer.innerHTML = "<p style='padding: 20px;'>No publications found matching your criteria.</p>";
@@ -37,12 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     pubs.forEach(pub => {
-      // Automatically bold and underline your name
       const formattedAuthors = pub.authors.map(author =>
         author.includes("Islam, K. R.") ? `<strong><u>${author}</u></strong>` : author
       ).join(", ");
 
-      // Create the layout for each paper
       const pubHTML = `
         <div class="publication-item" style="padding: 20px; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
           <h3 style="margin: 0 0 10px 0; font-size: 1.2rem;">
@@ -50,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </h3>
           <p style="margin: 0 0 5px 0; color: #333;">${formattedAuthors}</p>
           <p style="margin: 0 0 5px 0; font-style: italic; color: #555;">
-            ${pub.journal} (${pub.year}) - <strong>${pub.metrics || pub.status || ""}</strong>
+            ${pub.journal} (${pub.year}) - <strong>${pub.metrics || ""}</strong>
           </p>
         </div>
       `;
@@ -58,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Automatically find all years in your JSON and add them to the dropdown
   function populateYearFilter(pubs) {
     if (!yearFilter) return;
     const years = [...new Set(pubs.map(pub => pub.year))].sort((a, b) => b - a);
@@ -70,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Make the search bar and dropdown filters work
   function filterPublications() {
     const searchTerm = searchInput ? searchInput.value.toLowerCase() : "";
     const category = categoryFilter ? categoryFilter.value : "all";
@@ -90,7 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
     displayPublications(filtered);
   }
 
-  // Listen for typing in the search bar or changing dropdowns
   if (searchInput) searchInput.addEventListener("input", filterPublications);
   if (categoryFilter) categoryFilter.addEventListener("change", filterPublications);
   if (yearFilter) yearFilter.addEventListener("change", filterPublications);
