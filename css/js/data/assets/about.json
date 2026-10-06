@@ -1,0 +1,28 @@
+{
+  "name": "Your Name",
+  "tagline": "Researcher, educator, and designer",
+  "typedItems": ["Educator", "Researcher", "Designer", "Advocate"],
+
+  "text": "Write your short bio for the About section here.",
+  "roles": [
+    { "role": "Your Title / Position", "institution": "Your University or Organization" }
+  ],
+
+  "profileImage": "assets/img/profile-headshot.png",
+  "profileImageAlt": "Your Name profile photo",
+
+  "social": {
+    "bluesky": "",
+    "twitter": "",
+    "google_scholar": "",
+    "github": "",
+    "linkedin": "",
+    "academia": "",
+    "webofscience": "",
+    "researchgate": ""
+  },
+
+  "contacts": [
+    { "email": "your.email@university.edu", "type": "academic" }
+  ]
+}
